@@ -23,7 +23,7 @@ app = FastAPI(
 origins = [
     "http://localhost:5173",  # Si el frontend de Vite corre en este puerto local
     "http://localhost:3000",
-    "https://tudominio-frontend.onrender.com",  # ¡URL de tu frontend desplegado!
+    "https://modelo-transporte.onrender.com",  # ¡URL de tu frontend desplegado!
 ]
 
 app.add_middleware(
