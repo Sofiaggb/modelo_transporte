@@ -86,14 +86,14 @@ const ProblemForm = ({ onSubmit }) => {
       {/* Configuración de dimensiones */}
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div>
-          <label className="block text-gray-700 mb-2">Número de Orígenes</label>
+          <label className="block text-gray-700 mb-2">Número de Ofertas</label>
           <select
             value={formData.numOrigins}
             onChange={(e) => updateOrigins(e.target.value)}
             className="w-full p-2 border border-gray-300 rounded"
           >
             {[2, 3, 4, 5, 6].map(num => (
-              <option key={num} value={num}>{num} orígenes</option>
+              <option key={num} value={num}>{num} ofertas</option>
             ))}
           </select>
         </div>
@@ -115,10 +115,10 @@ const ProblemForm = ({ onSubmit }) => {
       {/* Oferta y Demanda */}
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div>
-          <h3 className="font-semibold mb-2">Oferta (Supply)</h3>
+          <h3 className="font-semibold mb-2">Oferta </h3>
           {formData.supply.map((value, index) => (
             <div key={index} className="flex items-center mb-2">
-              <span className="w-20 text-gray-600">Origen {index + 1}:</span>
+              <span className="w-20 text-gray-600">Oferta {index + 1}:</span>
               <input
                 type="number"
                 value={value}
@@ -133,7 +133,7 @@ const ProblemForm = ({ onSubmit }) => {
         </div>
 
         <div>
-          <h3 className="font-semibold mb-2">Demanda (Demand)</h3>
+          <h3 className="font-semibold mb-2">Demanda </h3>
           {formData.demand.map((value, index) => (
             <div key={index} className="flex items-center mb-2">
               <span className="w-20 text-gray-600">Destino {index + 1}:</span>
@@ -171,7 +171,7 @@ const ProblemForm = ({ onSubmit }) => {
               {formData.costs.map((row, rowIndex) => (
                 <tr key={rowIndex}>
                   <td className="p-2 bg-gray-100 border font-semibold">
-                    Origen {rowIndex + 1}
+                    Oferta {rowIndex + 1}
                   </td>
                   {row.map((cost, colIndex) => (
                     <td key={colIndex} className="p-1 border">
